@@ -34,3 +34,7 @@ d_hat <- sum(conversion_subset_A$length_of_stay)  + sum(conversion_subset_B$leng
 z_score <- (d_hat/SE_pool)
 print(z_score) #0.1640248 
 
+#Вычислим p_value, используя значение
+ p_value <- pnorm (q= -z_score, mean = 0, sd = 1) *2
+print(p_value) #0.8697116
+
