@@ -29,6 +29,8 @@ uplift <- (convertion_rate_B - convertion_rate_A)/ convertion_rate_A * 100
 uplift #82%
 
 #Вычислите Z-оценку, чтобы мы могли определить значение p
-  
- 
+SE_pool  <- (visitors_A + visitors_B)
+d_hat <- sum(conversion_subset_A$length_of_stay)  + sum(conversion_subset_B$length_of_stay)
+z_score <- (d_hat/SE_pool)
+print(z_score) #0.1640248 
 
